@@ -10,5 +10,10 @@ namespace DeviceInsight.Views
             InitializeComponent();
             this.DataContext = new BatteryHealthViewModel();
         }
+
+        private void BackButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }
