@@ -5,53 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DeviceInsight"
         mc:Ignorable="d"
-        Title="DeviceInsight" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
+        Title="DeviceInsight"
+        Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        SizeToContent="Manual">
 
-    <Window.Resources>
-        <Style x:Key="NavigationButton" TargetType="Button">
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="Padding" Value="15,12"/>
-            <Setter Property="Margin" Value="0,5"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="#333333"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" 
-                                CornerRadius="6" 
-                                Padding="{TemplateBinding Padding}"
-                                BorderThickness="1" BorderBrush="Transparent">
-                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#E8F4F8"/>
-                                <Setter Property="BorderBrush" Value="#0078D4"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" Value="#D0E8F2"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
-    <DockPanel>
-        <!-- Top Navigation Bar -->
-        <Border DockPanel.Dock="Top" Background="#F5F5F5" BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="20">
-            <TextBlock Text="DeviceInsight" FontSize="24" FontWeight="Bold" Foreground="#333333"/>
-        </Border>
-        <!-- Sidebar Navigation -->
-        <Border DockPanel.Dock="Left" Background="#FAFAFA" BorderBrush="#E0E0E0" BorderThickness="0,0,1,0" Width="200" Padding="10">
-            <StackPanel Margin="0,20,0,0">
-                <Button x:Name="BatteryButton" Style="{StaticResource NavigationButton}" Click="Battery_Health_Click" Content="🔋 Battery Health"/>
-                <!-- New features will be added here -->
-            </StackPanel>
-        </Border>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
-    </DockPanel>
+    <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
 </Window>

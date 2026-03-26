@@ -7,11 +7,7 @@ namespace DeviceInsight
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Battery_Health_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new Views.BatteryHealth());
+            MainFrame.Navigate(new Views.Home());
         }
     }
 }
